@@ -16,13 +16,13 @@ class App extends React.Component {
 
     render() {
         return(
-            <Router history={history}>
+            <Router history={history} basename={process.env.PUBLIC_URL}>
                 <Header />
                 <div className="ui container">                  
                     <Switch>
                         <Route path="/tasks/:id" exact children={<Child />} />    
-                        <Route path={process.env.PUBLIC_URL + '/createNewUser'} exact component={CreateUser} />   
-                        <Route path={process.env.PUBLIC_URL + '/'} exact component={CreateUser} /> 
+                        <Route path='/createNewUser' exact component={CreateUser} />   
+                      
                         <Route path="/tasks" exact component={List} />     
                         <Route path="/deleteUser" exact component={DeleteUser} />  
                         <Route path="/ee" exact component={DeleteUsers} />           
