@@ -4,7 +4,7 @@ import React from 'react';
 const Header = () => {
     return(
         <div className="pageHeader">
-            ToDo App
+            ToDo App App
         </div>
     )
 }
